@@ -4,16 +4,8 @@ var homes = {};
 var lastHome = "";
 
 Callback.addCallback("NativeCommand", function(cmd){
-    if(cmd.startsWith("/eval ")){
-        Game.message("EVAL:");
-        Game.message(eval(cmd.replace("/eval ", "")));
-    }
-    
-
     cmd = cmd.split(" ");
     if(cmd[0] == "/home"){
-        alert(cmd);
-        
         switch(cmd[1]){
             case "help":
             case "?":
