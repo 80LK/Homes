@@ -1,0 +1,31 @@
+{
+    "info": {
+        "name": "Homes",
+        "author": "80LK",
+        "version": "1.1",
+        "description": "/h - command assistance",
+        "icon": "mod_icon.png"
+    },
+    "resources": [],
+    "sources": [
+        {
+            "source": "src/dev",
+            "target": "main.js",
+            "type": "main",
+            "language": "typescript"
+        },
+        {
+            "source": "src/launch",
+            "type": "launcher",
+            "target": "launch.js",
+            "language": "typescript"
+        }
+    ],
+    "compile": [],
+    "additional": [
+        {
+            "source": "root/*",
+            "targetDir": "."
+        }
+    ]
+}
