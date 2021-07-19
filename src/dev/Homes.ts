@@ -26,12 +26,12 @@ namespace Homes {
                 case "set":
                     var name = "";
                     if (args[1] != null) {
-                        if (reservKeys.indexOf(args[2]) != -1) {
+                        if (reservKeys.indexOf(args[1]) != -1) {
                             Game.message(Translation.sprintf("Cannot create a house named \"%s\"", args[1]));
                             break;
                         }
 
-                        name = args[2];
+                        name = args[1];
                     } else {
                         var i = 1;
                         do {
@@ -56,12 +56,12 @@ namespace Homes {
 
                 case "del":
                 case "delete":
-                    if (args[2] == null) {
+                    if (args[1] == null) {
                         Game.message(Translation.translate("Invalid command syntax."));
                         break;
                     }
 
-                    var name = args[2];
+                    var name = args[1];
                     if (data.homes.hasOwnProperty(name)) {
                         delete data.homes[name];
                         Game.message(Translation.sprintf("Home \"%s\" removed.", name));
@@ -88,7 +88,7 @@ namespace Homes {
                     break;
 
                 default:
-                    var name = args[1];
+                    var name = args[0];
                     if (data.homes.hasOwnProperty(name)) {
                         var home = data.homes[name];
                         Player.setPosition(home.x, home.y, home.z);
