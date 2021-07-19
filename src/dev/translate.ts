@@ -1,10 +1,10 @@
 Translation.addTranslation(`/home set [name] - set the point of the house under the name \"name\"
 /home del <name> - delete the home point as \"name\".
-/home [name] - teleport to the point of the house \"name\".`,{
-        ru: `/home set [name] - установить точку дома под именем \"name\".
+/home [name] - teleport to the point of the house \"name\".`, {
+    ru: `/home set [name] - установить точку дома под именем \"name\".
 /home del <name> - удалить точку дома под именем \"name\".
 /home [name] - телепортироваться на точку дома \"name\".`,
-        en: `/home set [name] - set the point of the house under the name \"name\"
+    en: `/home set [name] - set the point of the house under the name \"name\"
 /home del <name> - delete the home point as \"name\".
 /home [name] - teleport to the point of the house \"name\".`
 });
@@ -50,9 +50,9 @@ Translation.addTranslation("Home not found.", {
     en: "Home not found."
 });
 
-//Good idea
-namespace Translation{
-    export function sprintf(name:string, ...args:string[]){
+
+namespace Translation {
+    export function sprintf(name: string, ...args: string[]) {
         var str = Translation.translate(name);
 
         for (var i = 0; i < args.length; i++)
