@@ -1,5 +1,5 @@
 namespace Homes {
-    type DictHomes = Dict;
+    type DictHomes = Dict<Vector>;
     const reservKeys = ["set", "del", "delete", "all", "help", "?"];
     interface SaverHomesScope {
         homes: DictHomes,
