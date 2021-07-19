@@ -1,6 +1,6 @@
 namespace Homes {
     type DictHomes = Dict<Vector>;
-    const reservKeys = ["set", "del", "delete", "all", "help", "?"];
+    const reservKeys = ["set", "del", "delete", "all", "help", "?", "list"];
     interface SaverHomesScope {
         homes: DictHomes,
         lastHome: string;
@@ -54,6 +54,12 @@ namespace Homes {
                     ));
                     break;
 
+                case "all":
+                case "list":
+                    var list = Object.keys(data.homes);
+                    Game.message(Translation.sprintf("List of houses: %s", list.join(",")));
+                    break;
+
                 case "del":
                 case "delete":
                     if (args[1] == null) {
@@ -74,7 +80,7 @@ namespace Homes {
                     break;
 
                 case undefined:
-                    if (data.lastHome == "") {
+                    if (data.lastHome == null) {
                         Game.message(Translation.translate("Home not found."));
                         break;
                     }
@@ -103,7 +109,7 @@ namespace Homes {
     Command.register({
         name: "/h",
         call: (args) => {
-            if(args.length == 0)
+            if (args.length == 0)
                 args.push("?");
 
             Command.get("/home").call(args)

@@ -49,6 +49,10 @@ Translation.addTranslation("Home not found.", {
     ru: "Дом не найден.",
     en: "Home not found."
 });
+Translation.addTranslation("List of houses: %s",{
+    ru:"Список домов: %s",
+    en:"List of houses: %s"
+});
 
 
 namespace Translation {
