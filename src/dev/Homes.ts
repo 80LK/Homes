@@ -116,6 +116,10 @@ namespace Homes {
             Command.get("/home").call(args)
         }
     });
+    Command.register({
+        name: "/sethome",
+        call: (args) => Command.get("/home").call(["set", ...args])
+    })
 
     Saver.addSavesScope<SaverHomesScope>("Homes",
         function read(scope) {
