@@ -102,7 +102,7 @@ namespace Homes {
     });
     Commands.register({
         name: "/h",
-        call: Commands.get("/home").call
+        call: () => Commands.get("/home").call(["?"])
     });
 
     Saver.addSavesScope<SaverHomesScope>("Homes",
