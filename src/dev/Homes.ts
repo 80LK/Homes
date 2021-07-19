@@ -10,7 +10,7 @@ namespace Homes {
         lastHome: null
     }
 
-    Commands.register({
+    Command.register({
         name: "/home",
         call: function (args) {
             switch (args[0]) {
@@ -100,9 +100,9 @@ namespace Homes {
             }
         }
     });
-    Commands.register({
+    Command.register({
         name: "/h",
-        call: () => Commands.get("/home").call(["?"])
+        call: () => Command.get("/home").call(["?"])
     });
 
     Saver.addSavesScope<SaverHomesScope>("Homes",

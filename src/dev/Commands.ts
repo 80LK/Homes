@@ -1,4 +1,4 @@
-namespace Commands {
+namespace Command {
     export interface Info {
         name: string;
         description?: string;
@@ -42,9 +42,9 @@ namespace Commands {
 Callback.addCallback("NativeCommand", function (command) {
     const cmd = command.split(" ");
     const nameCmd = cmd[0];
-    if (Commands.has(nameCmd)) {
+    if (Command.has(nameCmd)) {
         cmd.shift();
-        Commands.invoke(nameCmd, cmd);
+        Command.invoke(nameCmd, cmd);
         Game.prevent();
     }
 });
