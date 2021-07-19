@@ -58,7 +58,7 @@ namespace Homes {
                 case "all":
                 case "list":
                     var list = Object.keys(data.homes);
-                    Game.message(Translation.sprintf("List of houses: %s", list.join(",")));
+                    Game.message(Translation.sprintf("List of houses: %s", list.join(", ")));
                     break;
 
                 case "del":
