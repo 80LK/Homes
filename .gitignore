@@ -1,3 +1,5 @@
 _dev/**
 output/**/*
 tsconfig.json
+Homes/**/*
+Homes.zipp
