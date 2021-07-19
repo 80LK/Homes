@@ -19,7 +19,8 @@ namespace Homes {
                     Game.message(Translation.translate(
                         `/home set [name] - set the point of the house under the name \"name\"
 /home del <name> - delete the home point as \"name\".
-/home [name] - teleport to the point of the house \"name\".`
+/home [name] - teleport to the point of the house \"name\".
+/home list - view the list of houses.`
                     ));
                     break;
 

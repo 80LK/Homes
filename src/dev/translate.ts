@@ -1,12 +1,15 @@
 Translation.addTranslation(`/home set [name] - set the point of the house under the name \"name\"
 /home del <name> - delete the home point as \"name\".
-/home [name] - teleport to the point of the house \"name\".`, {
+/home [name] - teleport to the point of the house \"name\".
+/home list - view the list of houses.`, {
     ru: `/home set [name] - установить точку дома под именем \"name\".
 /home del <name> - удалить точку дома под именем \"name\".
-/home [name] - телепортироваться на точку дома \"name\".`,
+/home [name] - телепортироваться на точку дома \"name\".
+/home list - посмотреть список домов.`,
     en: `/home set [name] - set the point of the house under the name \"name\"
 /home del <name> - delete the home point as \"name\".
-/home [name] - teleport to the point of the house \"name\".`
+/home [name] - teleport to the point of the house \"name\".
+/home list - view the list of houses.`
 });
 Translation.addTranslation("Home \"%s\" created.", {
     ru: "Дом \"%s\" создан.",
